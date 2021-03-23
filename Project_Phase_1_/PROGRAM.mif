@@ -1,0 +1,16 @@
+-- Content of the RAM memory in the file PROGRAM.MIF
+DEPTH = 16; -- Number of memory locations: 4-bit address
+WIDTH = 8; -- Data Width of memory: 8-bit data
+ADDRESS_RADIX = BIN; -- Specifies the address values are in binary
+					 -- Other valid radixes are HEX, DEC, OCT, BIN
+DATA_RADIX = BIN; -- Specifies the data values are in binary
+-- Specify memory content.
+-- Format of each memory location is
+-- address : data
+CONTENTBEGIN[0000..1111] : 00000000; -- Initialize locations range 00-1F to 0
+-- Program t0000 : 01100000; --you can write your machine code here
+0001 : 10000000;  
+0010 : 10100000; 
+0011 : 11000001; 
+0100 : 11111111; 
+END;
